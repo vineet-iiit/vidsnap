@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VidSnap – YouTube & Instagram Downloader</title>
-  <meta name="description" content="Download YouTube and Instagram videos in full quality or choose your preferred resolution. Supports MP4 and MP3 downloads." />
+  <meta name="description"
+    content="Download YouTube and Instagram videos in full quality or choose your preferred resolution. Supports MP4 and MP3 downloads." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="/static/style.css" />
 </head>
+
 <body>
   <!-- Animated background particles -->
   <div class="bg-orbs">
@@ -23,11 +27,12 @@
       <div class="logo">
         <div class="logo-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="url(#grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="url(#grad)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
             <defs>
               <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#a855f7"/>
-                <stop offset="100%" style="stop-color:#3b82f6"/>
+                <stop offset="0%" style="stop-color:#a855f7" />
+                <stop offset="100%" style="stop-color:#3b82f6" />
               </linearGradient>
             </defs>
           </svg>
@@ -43,7 +48,7 @@
     <!-- Hero -->
     <section class="hero">
       <h1 class="hero-title">
-        Download Any Video<br/>
+        Download Any Video<br />
         <span class="gradient-text">In Full Quality</span>
       </h1>
       <p class="hero-subtitle">Paste a YouTube or Instagram link, choose your quality, and download instantly.</p>
@@ -54,18 +59,12 @@
       <div class="url-input-group">
         <div class="url-icon">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
           </svg>
         </div>
-        <input
-          type="url"
-          id="urlInput"
-          class="url-input"
-          placeholder="Paste YouTube or Instagram URL here..."
-          autocomplete="off"
-          spellcheck="false"
-        />
+        <input type="url" id="urlInput" class="url-input" placeholder="Paste YouTube or Instagram URL here..."
+          autocomplete="off" spellcheck="false" />
         <button class="btn-fetch" id="fetchBtn" onclick="fetchInfo()">
           <span class="btn-text">Fetch</span>
           <div class="btn-spinner hidden" id="fetchSpinner"></div>
@@ -107,11 +106,24 @@
           <label class="option-label">Format</label>
           <div class="toggle-wrap">
             <button class="toggle-btn active" id="btnVideo" onclick="setFormat('video')">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+                <line x1="7" y1="2" x2="7" y2="22" />
+                <line x1="17" y1="2" x2="17" y2="22" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <line x1="2" y1="7" x2="7" y2="7" />
+                <line x1="2" y1="17" x2="7" y2="17" />
+                <line x1="17" y1="7" x2="22" y2="7" />
+                <line x1="17" y1="17" x2="22" y2="17" />
+              </svg>
               Video (MP4)
             </button>
             <button class="toggle-btn" id="btnAudio" onclick="setFormat('audio')">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+              </svg>
               Audio (MP3)
             </button>
           </div>
@@ -127,7 +139,11 @@
       </div>
 
       <button class="btn-download" id="downloadBtn" onclick="startDownload()">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
         Download Now
       </button>
     </div>
@@ -162,7 +178,11 @@
       <p class="done-filename" id="doneFilename">video.mp4</p>
       <div class="done-actions">
         <a class="btn-save" id="saveBtn" href="#" id="saveBtn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
           Save to Device
         </a>
         <button class="btn-new" onclick="resetApp()">Download Another</button>
@@ -198,12 +218,11 @@
     </div>
 
     <footer class="footer">
-      <p>Built with ❤️ using yt-dlp &bull; Supports YouTube &amp; Instagram</p>
+      <p>Supports YouTube &amp; Instagram</p>
     </footer>
   </div>
 
   <script src="/static/app.js"></script>
 </body>
+
 </html>
-
-
